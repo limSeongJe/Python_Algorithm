@@ -1,0 +1,38 @@
+# 배열을 이용한 연결 리스트
+# 각 배열의 요소들이 하나의 노드를 의미하게 된다.
+
+class Array_LinkedList :
+  
+  def __init__( self, length ) :
+    self.linked_list = [0] * length
+    self.max_pos = 0
+  
+  def add( self, num, pos ) :
+    if pos > max_pos :
+      return False
+      
+    if pos > self.max_pos :
+      self.linked_list[pos] = num
+      self.max_pos = pos
+    else :
+      max_pos += 1
+      
+      tmp = max_pos
+      while tmp < pos :
+        self.linked_list[tmp - 1 ] = self.linked_list[tmp]
+        tmp -= 1
+      self.linked_list[pos] = num
+      
+    def remove( self, pos ) :
+      if num > max_pos :
+        return False
+      max_pos -= 1
+      self.linked_list[pos] = 0
+      for i in range( pos, max_pos )
+        self.linked_list[ i ] = self.linked_list[ i + 1 ]
+        
+    def linkedList_length( self ) :
+      return len( self.linked_list )
+      
+    def show( self ) :
+      print( self.linked_list )
