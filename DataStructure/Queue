@@ -1,0 +1,17 @@
+# 큐 : 데이터를 임시 저장하는 자료구조
+# 선입 선출 방식을 따름
+# 먼저 넣은 데이터가 가장 먼저 나온다.
+
+class MyQueue :
+  pos = 0
+  queue_list = []
+  
+  def inque( self, num ) :
+    queue_list.append( num )
+    pos += 1
+    
+  def deque( self ) :
+    return queue_list.pop( pos - 1 )
+    
+  def queue_length( self ) :
+    return len( queue_list )
