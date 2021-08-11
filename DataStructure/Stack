@@ -1,0 +1,15 @@
+# 스택 : 데이터를 임시적으로 사용할 때 사용하는 자료 구조 중 하나
+# 후입 선출 방식을 이용
+# 먼저 넣은 데이터가 가장 나중에 나온다.
+
+class MyStack :
+  stack_list = []
+  
+  def push( self, num ) :
+    stack_list.append( num )
+    
+  def pop( self ) :
+    return stack_list.pop(0)
+    
+  def stack_length( self ) :
+    print( len( stack_list ) )
