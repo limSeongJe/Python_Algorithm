@@ -3,13 +3,15 @@
 # 먼저 넣은 데이터가 가장 나중에 나온다.
 
 class MyStack :
-  stack_list = []
+
+  def __init__( self ) :
+    self.stack_list = []
   
   def push( self, num ) :
-    stack_list.append( num )
+    self.stack_list.append( num )
     
   def pop( self ) :
-    return stack_list.pop(0)
+    return self.stack_list.pop(0)
     
   def stack_length( self ) :
-    print( len( stack_list ) )
+    print( len( self.stack_list ) )
