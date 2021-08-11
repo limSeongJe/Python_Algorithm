@@ -3,15 +3,17 @@
 # 먼저 넣은 데이터가 가장 먼저 나온다.
 
 class MyQueue :
-  pos = 0
-  queue_list = []
+  
+  def __init__( self ) :
+    self.queue_list = []
+    self.pos = 0
   
   def inque( self, num ) :
-    queue_list.append( num )
-    pos += 1
+    self.queue_list.append( num )
+    self.pos += 1
     
   def deque( self ) :
-    return queue_list.pop( pos - 1 )
+    return self.queue_list.pop( self.pos - 1 )
     
   def queue_length( self ) :
-    return len( queue_list )
+    return len( self.queue_list )
